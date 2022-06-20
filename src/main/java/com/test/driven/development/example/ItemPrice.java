@@ -1,4 +1,4 @@
-package com.test.driven.development.ch1;
+package com.test.driven.development.example;
 
 import java.util.HashMap;
 import java.util.Map;
