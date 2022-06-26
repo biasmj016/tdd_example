@@ -2,12 +2,21 @@ package com.test.driven.development.example3;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class PriceTagTest {
     private static final String VEGETABLE_CARROT = "carrot";
     private static final String FRUIT_APPLE = "apple";
+
+    @Test
+    void 과일생성자확인() {
+        assertNotNull(PriceTag.fruit());
+    }
+
+    @Test
+    void 야채생성자확인() {
+        assertNotNull(PriceTag.vegetable());
+    }
 
     @Test
     void 과일의가격비교() {
