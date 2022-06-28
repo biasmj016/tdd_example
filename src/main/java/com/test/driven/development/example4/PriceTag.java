@@ -1,16 +1,21 @@
 package com.test.driven.development.example4;
 
-public abstract class PriceTag {
-
+public class PriceTag {
     protected int amount;
+    protected String item;
 
-    public static Fruit fruit(int amount) {
-        return new Fruit(amount);
+    public PriceTag(int amount, String item) {
+        this.amount = amount;
+        this.item = item;
     }
 
-    public static Vegetable vegetable(int amount) {
-        return new Vegetable(amount);
+    public String item(){
+        return item;
     }
 
-    abstract String item();
+    public boolean equals(Object object){
+        PriceTag priceTag = (PriceTag) object;
+        return amount == priceTag.amount && item().equals(priceTag.item());
+
+    }
 }
