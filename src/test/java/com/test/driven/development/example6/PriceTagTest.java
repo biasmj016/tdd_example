@@ -8,11 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class PriceTagTest {
 
     @Test
-    public void testEquality() {
-        PriceTag fruit = PriceTag.fruit(2_000);
-        Expression sum = fruit.plus(fruit);
-        Price price = new Price();
-        PriceTag reduced = price.reduce(sum, "apple");
-        assertEquals(PriceTag.fruit(4_000), reduced);
+    public void testSimpleAddition() {
+       Money sum = Money.dollar(5).plus(Money.dollor(5));
+       assertEquals(Money.dollar(10), sum);
     }
 }
