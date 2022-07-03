@@ -1,6 +1,6 @@
 package com.test.driven.development.example6;
 
-public class Money {
+public class Money implements Expression{
     protected int amount;
     protected String currency;
 
@@ -9,7 +9,11 @@ public class Money {
         this.currency = currency;
     }
 
-    public Money plus(Money added){
+    public static Money dollar(int amount){
+        return new Money(amount, "USD");
+    }
+
+    public Expression plus(Money added){
         return new Money(amount + added.amount, currency);
     }
 }
