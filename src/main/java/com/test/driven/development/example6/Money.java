@@ -1,5 +1,7 @@
 package com.test.driven.development.example6;
 
+import com.test.driven.development.example4.PriceTag;
+
 public class Money implements Expression{
     protected int amount;
     protected String currency;
@@ -15,5 +17,11 @@ public class Money implements Expression{
 
     public Expression plus(Money added){
         return new Money(amount + added.amount, currency);
+    }
+
+    public boolean equals(Object object){
+        Money money = (Money) object;
+        return amount == money.amount;
+
     }
 }
