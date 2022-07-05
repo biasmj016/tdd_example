@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class PriceTagTest {
+class TestSimpleAddition {
 
     @Test
     public void testSimpleAddition() {
