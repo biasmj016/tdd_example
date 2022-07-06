@@ -22,4 +22,8 @@ public class Money implements Expression {
         return amount == money.amount;
 
     }
+
+    public Money reduce(String to){
+        return this;
+    }
 }
