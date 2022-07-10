@@ -12,6 +12,7 @@ public class Money implements Expression {
     public static Money dollar(int amount){
         return new Money(amount, "USD");
     }
+    public static Money franc(int amount){ return new Money(amount, "CHF"); }
 
     public Expression plus(Money added){
         return new Sum(this, added);
