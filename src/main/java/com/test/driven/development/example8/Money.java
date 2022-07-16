@@ -32,4 +32,8 @@ public class Money implements Expression {
     public Expression times(int multiplier){
         return new Money(amount * multiplier, currency);
     }
+
+    public boolean is() {
+        return this instanceof Money;
+    }
 }

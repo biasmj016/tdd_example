@@ -2,6 +2,7 @@ package com.test.driven.development.example8;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TestSumMoney {
 
@@ -35,5 +36,10 @@ class TestSumMoney {
 
         assertEquals(Money.dollar(20), result);
 
+    }
+    @Test
+    public void testPlusSameCurrencyReturnsMoney() {
+        Expression sum = Money.dollar(5).plus(Money.dollar(1));
+        assertTrue(sum.is());
     }
 }
