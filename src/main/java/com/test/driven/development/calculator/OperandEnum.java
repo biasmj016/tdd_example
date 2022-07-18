@@ -23,7 +23,7 @@ public enum OperandEnum {
                 .stream()
                 .filter(c -> c.code.equals(code))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("유요한 연산자가 아닙니다"));
+                .orElseThrow(() -> new IllegalArgumentException("유효한 연산자가 아닙니다"));
     }
 
     public static int operation(String code, int left, int right){
