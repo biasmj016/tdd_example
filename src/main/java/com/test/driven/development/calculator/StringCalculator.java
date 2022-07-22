@@ -7,26 +7,18 @@ import java.util.Scanner;
 
 public class StringCalculator {
 
-    private List<Integer> operandList = new ArrayList<>();
-    private List<String> operatorList = new ArrayList<>();
+    private List<String> expressionList = new ArrayList<>();
 
     public StringCalculator() {
         Scanner scanner = new Scanner(System.in);
         String expression = scanner.nextLine();
-        String[] expressions = new CalculatorUtil(expression).split();
-
-
+        new StringCalculator(new CalculatorUtil(expression).split());
     }
-    public StringCalculator(Integer[] operands, String[] operators) {
-        this.operandList = Arrays.asList(operands);
-        this.operatorList = Arrays.asList(operators);
+    public StringCalculator(String[] expressions) {
+        this.expressionList = Arrays.asList(expressions);
     }
 
-    public int[] filterOperandList(String[] expressions){
-        return Arrays.asList(expressions).stream().mapToInt(Integer::parseInt).toArray();
-    }
-
-    public int execute(String expression) {
+    public int execute() {
         return 0;
     }
 }

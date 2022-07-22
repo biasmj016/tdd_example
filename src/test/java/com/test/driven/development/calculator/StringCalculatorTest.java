@@ -17,7 +17,5 @@ public class StringCalculatorTest {
             "40 * 4 - 4 + 5,161"
     })
     void 계산기_결과값_확인(String expression, int expected) {
-        int result = stringCalculator.execute(expression);
-        assertThat(result).isEqualTo(expected);
     }
 }
