@@ -1,13 +1,10 @@
 package com.test.driven.development.calculator;
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 public class StringCalculatorTest {
-
-    private StringCalculator stringCalculator = new StringCalculator();
 
     @ParameterizedTest
     @CsvSource(value = {
@@ -17,5 +14,9 @@ public class StringCalculatorTest {
             "40 * 4 - 4 + 5,161"
     })
     void 계산기_결과값_확인(String expression, int expected) {
+        Assertions.assertThatCode(() ->{
+            StringCalculator stringCalculator = new StringCalculator(expression);
+            Assertions.assertThat(stringCalculator.execute()).isEqualTo(expected);
+        }).doesNotThrowAnyException();
     }
 }

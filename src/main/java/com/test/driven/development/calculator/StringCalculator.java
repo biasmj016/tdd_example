@@ -1,28 +1,18 @@
 package com.test.driven.development.calculator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
-
 public class StringCalculator {
 
-    private List<String> operationList = new ArrayList<>();
-    private List<Integer> operandList = new ArrayList<>();
+    private String[] expressions;
 
-    public StringCalculator() {
-        Scanner scanner = new Scanner(System.in);
-        String expression = scanner.nextLine();
-    }
-
-    public List<String> separateOperation(String[] expressions){
-        return Arrays.asList(expressions)
-                .stream()
-                .collect(Collectors.toList());
+    public StringCalculator(String expressions) {
+        this.expressions = new CalculatorUtil(expressions).split();
     }
 
     public int execute() {
-        return 0;
+        Integer base = new Integer(expressions[0]);
+        for (int i = 1; i < expressions.length; i+=2) {
+            base = OperandEnum.operation(expressions[i], base, new Integer(expressions[i+1]));
+        }
+        return base;
     }
 }
