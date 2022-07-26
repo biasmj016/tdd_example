@@ -1,10 +1,10 @@
-package com.test.driven.development.calculator;
+package com.test.driven.development.calculator.step1;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.test.driven.development.calculator.OperandEnum.operation;
+import static com.test.driven.development.calculator.step1.OperandEnum.operation;
 
 public class OperandEnumTest {
 

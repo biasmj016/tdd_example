@@ -1,5 +1,6 @@
-package com.test.driven.development.calculator;
+package com.test.driven.development.calculator.step1;
 
+import com.test.driven.development.calculator.step1.StringCalculator;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;

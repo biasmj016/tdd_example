@@ -1,4 +1,4 @@
-package com.test.driven.development.calculator;
+package com.test.driven.development.calculator.step1;
 
 import java.util.EnumSet;
 import java.util.function.BinaryOperator;
