@@ -19,7 +19,11 @@ public enum OperandEnum {
         this.operation = operation;
     }
 
-    private static OperandEnum find(String code){
+    public boolean isPriority() {
+        return priority;
+    }
+
+    public static OperandEnum find(String code){
         return EnumSet.allOf(OperandEnum.class)
                 .stream()
                 .filter(c -> c.code.equals(code))
